@@ -70,10 +70,10 @@
 		EF5D209F213EC15B00598E14 /* OpenGLLearning */ = {
 			isa = PBXGroup;
 			children = (
+				EF5D2270213EE5B900598E14 /* GL */,
 				EF5D20C1213EC41500598E14 /* Program */,
 				EF5D20B6213EC1C800598E14 /* Shaders */,
 				EF5D20A0213EC15B00598E14 /* AppDelegate.swift */,
-				EF5D20C6213EC45C00598E14 /* ObjectGL.swift */,
 				EF5D20A2213EC15B00598E14 /* ViewController.swift */,
 				EF5D20A4213EC15B00598E14 /* Main.storyboard */,
 				EF5D20A7213EC15C00598E14 /* Assets.xcassets */,
@@ -102,6 +102,14 @@
 				EF5D20B3213EC17D00598E14 /* ShaderProgram.swift */,
 			);
 			path = Program;
+			sourceTree = "<group>";
+		};
+		EF5D2270213EE5B900598E14 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D20C6213EC45C00598E14 /* ObjectGL.swift */,
+			);
+			path = GL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

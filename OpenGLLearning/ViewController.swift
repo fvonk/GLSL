@@ -26,9 +26,8 @@ class ViewController: UIViewController {
         glkView.context = context
         EAGLContext.setCurrent(self.context)
         
-        
         objectGL = ObjectGL(glContext)
-        
+    
         glkView.display()
     }
 }
@@ -36,7 +35,7 @@ class ViewController: UIViewController {
 
 extension ViewController: GLKViewDelegate {
     func glkView(_ view: GLKView, drawIn rect: CGRect) {
-        glClearColor(0.0, 104.0/255.0, 55.0/255.0, 1.0)
+        glClearColor(1.0, 1.0, 1.0, 1.0)
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT))
         objectGL.draw()
     }
