@@ -33,9 +33,9 @@ class ObjectGL: NSObject {
         super.init()
         
         let positionData: [VertexData] = [
-            VertexData(x: -1.0, y: -1.0, z: 0.0, r: 1.0, g: 1.0, b: 1.0),
-            VertexData(x: 1.0, y: -1.0, z: 0.0, r: 1.0, g: 1.0, b: 1.0),
-            VertexData(x: 0.0, y: 0.0, z: 0.0, r: 0.0, g: 1.0, b: 0.2)
+            VertexData(x: -1.0, y: -1.0, z: 0.0, r: 1.0, g: 0.0, b: 0.0),
+            VertexData(x: 1.0, y: -1.0, z: 0.0, r: 0.0, g: 1.0, b: 0.0),
+            VertexData(x: 0.0, y: 0.0, z: 0.0, r: 0.0, g: 0.0, b: 1.0)
         ]
 //        let colorData: [VertexData] = [
 //            VertexData(x: 1.0, y: 0.0 , z: 0.0),
@@ -68,7 +68,7 @@ class ObjectGL: NSObject {
         
         let vertexColorLocation = shader.getAttributeLocation("a_color")!
         glEnableVertexAttribArray(vertexColorLocation)
-        glVertexAttribPointer(vertexColorLocation, 3, GLenum(GL_UNSIGNED_BYTE), GLboolean(GL_TRUE), GLsizei(MemoryLayout<VertexData>.stride), UnsafeRawPointer(bitPattern: VertexData.colorOffset))
+        glVertexAttribPointer(vertexColorLocation, 3, GLenum(GL_FLOAT), GLboolean(GL_TRUE), GLsizei(MemoryLayout<VertexData>.stride), UnsafeRawPointer(bitPattern: VertexData.colorOffset))
     }
     
     func draw() {
