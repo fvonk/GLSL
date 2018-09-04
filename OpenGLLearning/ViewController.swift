@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         
         
         objectGL = ObjectGL(glContext)
+        
+        glkView.display()
     }
 }
 
