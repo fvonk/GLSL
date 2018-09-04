@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         self.glContext = GLContext()
         context = EAGLContext(api: .openGLES3)!
         glkView.context = context
+        glkView.isOpaque = true
+//        glView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        glkView.drawableMultisample = .multisample4X
+        glkView.drawableColorFormat = .RGBA8888
         EAGLContext.setCurrent(self.context)
         
         objectGL = ObjectGL(glContext)

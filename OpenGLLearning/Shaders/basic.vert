@@ -12,6 +12,6 @@ varying vec3 v_color;
 
 void main()
 {
-    v_color = a_color;
     gl_Position = vec4(a_position,1.0);
+    v_color = a_color;    
 }
