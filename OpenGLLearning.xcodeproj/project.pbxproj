@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF5D20A1213EC15B00598E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20A0213EC15B00598E14 /* AppDelegate.swift */; };
+		EF5D20A3213EC15B00598E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20A2213EC15B00598E14 /* ViewController.swift */; };
+		EF5D20A6213EC15B00598E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20A4213EC15B00598E14 /* Main.storyboard */; };
+		EF5D20A8213EC15C00598E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20A7213EC15C00598E14 /* Assets.xcassets */; };
+		EF5D20AB213EC15C00598E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20A9213EC15C00598E14 /* LaunchScreen.storyboard */; };
+		EF5D20B4213EC17D00598E14 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20B2213EC17C00598E14 /* Matrix.swift */; };
+		EF5D20B5213EC17D00598E14 /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20B3213EC17D00598E14 /* ShaderProgram.swift */; };
+		EF5D20B9213EC1CF00598E14 /* basic_uniform.frag in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20B7213EC1CF00598E14 /* basic_uniform.frag */; };
+		EF5D20BA213EC1CF00598E14 /* basic_uniform.vert in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20B8213EC1CF00598E14 /* basic_uniform.vert */; };
+		EF5D20BD213EC20B00598E14 /* basic.vert in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20BB213EC20B00598E14 /* basic.vert */; };
+		EF5D20BE213EC20B00598E14 /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20BC213EC20B00598E14 /* basic.frag */; };
+		EF5D20C5213EC45700598E14 /* GLContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20C4213EC45700598E14 /* GLContext.swift */; };
+		EF5D20C7213EC45C00598E14 /* ObjectGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20C6213EC45C00598E14 /* ObjectGL.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF5D209D213EC15B00598E14 /* OpenGLLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5D20A0213EC15B00598E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF5D20A2213EC15B00598E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF5D20A5213EC15B00598E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF5D20A7213EC15C00598E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF5D20AA213EC15C00598E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF5D20AC213EC15C00598E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5D20B2213EC17C00598E14 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		EF5D20B3213EC17D00598E14 /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		EF5D20B7213EC1CF00598E14 /* basic_uniform.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic_uniform.frag; sourceTree = "<group>"; };
+		EF5D20B8213EC1CF00598E14 /* basic_uniform.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic_uniform.vert; sourceTree = "<group>"; };
+		EF5D20BB213EC20B00598E14 /* basic.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.vert; sourceTree = "<group>"; };
+		EF5D20BC213EC20B00598E14 /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.frag; sourceTree = "<group>"; };
+		EF5D20C4213EC45700598E14 /* GLContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLContext.swift; sourceTree = "<group>"; };
+		EF5D20C6213EC45C00598E14 /* ObjectGL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectGL.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF5D209A213EC15B00598E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF5D2094213EC15B00598E14 = {
+			isa = PBXGroup;
+			children = (
+				EF5D209F213EC15B00598E14 /* OpenGLLearning */,
+				EF5D209E213EC15B00598E14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5D209E213EC15B00598E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D209D213EC15B00598E14 /* OpenGLLearning.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF5D209F213EC15B00598E14 /* OpenGLLearning */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D20C1213EC41500598E14 /* Program */,
+				EF5D20B6213EC1C800598E14 /* Shaders */,
+				EF5D20A0213EC15B00598E14 /* AppDelegate.swift */,
+				EF5D20C6213EC45C00598E14 /* ObjectGL.swift */,
+				EF5D20A2213EC15B00598E14 /* ViewController.swift */,
+				EF5D20A4213EC15B00598E14 /* Main.storyboard */,
+				EF5D20A7213EC15C00598E14 /* Assets.xcassets */,
+				EF5D20A9213EC15C00598E14 /* LaunchScreen.storyboard */,
+				EF5D20AC213EC15C00598E14 /* Info.plist */,
+			);
+			path = OpenGLLearning;
+			sourceTree = "<group>";
+		};
+		EF5D20B6213EC1C800598E14 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D20B7213EC1CF00598E14 /* basic_uniform.frag */,
+				EF5D20B8213EC1CF00598E14 /* basic_uniform.vert */,
+				EF5D20BC213EC20B00598E14 /* basic.frag */,
+				EF5D20BB213EC20B00598E14 /* basic.vert */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		EF5D20C1213EC41500598E14 /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				EF5D20C4213EC45700598E14 /* GLContext.swift */,
+				EF5D20B2213EC17C00598E14 /* Matrix.swift */,
+				EF5D20B3213EC17D00598E14 /* ShaderProgram.swift */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF5D209C213EC15B00598E14 /* OpenGLLearning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5D20AF213EC15C00598E14 /* Build configuration list for PBXNativeTarget "OpenGLLearning" */;
+			buildPhases = (
+				EF5D2099213EC15B00598E14 /* Sources */,
+				EF5D209A213EC15B00598E14 /* Frameworks */,
+				EF5D209B213EC15B00598E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenGLLearning;
+			productName = OpenGLLearning;
+			productReference = EF5D209D213EC15B00598E14 /* OpenGLLearning.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF5D2095213EC15B00598E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Pavel Kozlov";
+				TargetAttributes = {
+					EF5D209C213EC15B00598E14 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EF5D2098213EC15B00598E14 /* Build configuration list for PBXProject "OpenGLLearning" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF5D2094213EC15B00598E14;
+			productRefGroup = EF5D209E213EC15B00598E14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF5D209C213EC15B00598E14 /* OpenGLLearning */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF5D209B213EC15B00598E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5D20AB213EC15C00598E14 /* LaunchScreen.storyboard in Resources */,
+				EF5D20BD213EC20B00598E14 /* basic.vert in Resources */,
+				EF5D20B9213EC1CF00598E14 /* basic_uniform.frag in Resources */,
+				EF5D20A8213EC15C00598E14 /* Assets.xcassets in Resources */,
+				EF5D20BA213EC1CF00598E14 /* basic_uniform.vert in Resources */,
+				EF5D20A6213EC15B00598E14 /* Main.storyboard in Resources */,
+				EF5D20BE213EC20B00598E14 /* basic.frag in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF5D2099213EC15B00598E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5D20A3213EC15B00598E14 /* ViewController.swift in Sources */,
+				EF5D20C5213EC45700598E14 /* GLContext.swift in Sources */,
+				EF5D20B5213EC17D00598E14 /* ShaderProgram.swift in Sources */,
+				EF5D20C7213EC45C00598E14 /* ObjectGL.swift in Sources */,
+				EF5D20A1213EC15B00598E14 /* AppDelegate.swift in Sources */,
+				EF5D20B4213EC17D00598E14 /* Matrix.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF5D20A4213EC15B00598E14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5D20A5213EC15B00598E14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF5D20A9213EC15C00598E14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5D20AA213EC15C00598E14 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF5D20AD213EC15C00598E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF5D20AE213EC15C00598E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF5D20B0213EC15C00598E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXD7C56LEN;
+				INFOPLIST_FILE = OpenGLLearning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OpenGLLearning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF5D20B1213EC15C00598E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXD7C56LEN;
+				INFOPLIST_FILE = OpenGLLearning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OpenGLLearning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF5D2098213EC15B00598E14 /* Build configuration list for PBXProject "OpenGLLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5D20AD213EC15C00598E14 /* Debug */,
+				EF5D20AE213EC15C00598E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5D20AF213EC15C00598E14 /* Build configuration list for PBXNativeTarget "OpenGLLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5D20B0213EC15C00598E14 /* Debug */,
+				EF5D20B1213EC15C00598E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF5D2095213EC15B00598E14 /* Project object */;
+}
