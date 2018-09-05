@@ -50,6 +50,24 @@ class ShaderProgram: NSObject {
         attachShader(vert, withType: GL_VERTEX_SHADER)
         attachShader(frag, withType: GL_FRAGMENT_SHADER)
         link()
+        
+        
+        var numAttribs = GLint()
+        var maxLength = GLint()
+        glGetProgramiv(program, GLenum(GL_ACTIVE_ATTRIBUTES), &numAttribs)
+        glGetProgramiv(program, GLenum(GL_ACTIVE_ATTRIBUTE_MAX_LENGTH), &maxLength)
+        print(numAttribs, maxLength)
+        for i in 0..<numAttribs {
+            
+            var actualLength = GLsizei()
+            var arraySize = GLint()
+            var type = GLenum()
+            var name = Array.init(repeating: GLchar(), count: Int(maxLength))
+            glGetActiveAttrib(program, GLuint(i), maxLength, &actualLength, &arraySize, &type, &name)
+            print(actualLength, arraySize, type, (name.map{ Character(UnicodeScalar(Int($0))!) }).reduce("", { (result, character) -> String in
+                return result + String(character)
+            }))
+        }
     }
 
     deinit {
