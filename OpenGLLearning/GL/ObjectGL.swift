@@ -76,4 +76,9 @@ class ObjectGL: NSObject {
         glBindVertexArray(vaoHandle)
         glDrawArrays(GLenum(GL_TRIANGLES), 0, 3)
     }
+    
+    deinit {
+        glDeleteBuffers(1, &bufferId)
+        glDeleteVertexArrays(1, &vaoHandle)
+    }
 }
