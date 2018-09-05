@@ -32,44 +32,43 @@ class ObjectGL: NSObject {
 
         super.init()
         
-        let positionData: [VertexData] = [
-            VertexData(x: -1.0),VertexData(x: -1.0),VertexData(x: 0.0),
-            VertexData(x: 1.0),VertexData(x: -1.0),VertexData(x: 0.0),
-            VertexData(x: 0.0),VertexData(x: 0.0),VertexData(x: 0.0)
+        let positionData: [GLfloat] = [
+            -1.0, -1.0, 0.0,
+            1.0, -1.0, 0.0,
+            0.0, 0.0, 0.0
         ]
-        let colorData: [VertexData] = [
-            VertexData(x: 1.0),VertexData(x: 0.0),VertexData(x: 0.0),
-            VertexData(x: 0.0),VertexData(x: 1.0),VertexData(x: 0.0),
-            VertexData(x: 0.0),VertexData(x: 0.0),VertexData(x: 1.0)
+        let colorData: [GLfloat] = [
+            1.0, 0.0, 0.0,
+            0.0, 1.0, 0.0,
+            0.0, 0.0, 1.0
         ]
-        
         
         var vboHandles: [GLuint] = Array.init(repeating: 0, count: 2)
-//        var vboHandle1 = GLuint()
         glGenBuffers(2, &vboHandles)
-//        glGenBuffers(1, &bufferId)
         let positionBufferHandle = vboHandles[0]
         let colorBufferHandle = vboHandles[1]
-        
-//        var vboHandle2 = GLuint()
-//        glGenBuffers(1, &vboHandle2)
-        
+
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), positionBufferHandle)
-        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<VertexData>.stride * positionData.count, positionData, GLenum(GL_STATIC_DRAW))
-        glBindBuffer(GLenum(GL_ARRAY_BUFFER), colorBufferHandle)
-        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<VertexData>.stride * colorData.count, colorData, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<GLfloat>.size * positionData.count, positionData, GLenum(GL_STATIC_DRAW))
         
+        glBindBuffer(GLenum(GL_ARRAY_BUFFER), colorBufferHandle)
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<GLfloat>.size * colorData.count, colorData, GLenum(GL_STATIC_DRAW))
         
         glGenVertexArrays(1, &vaoHandle)
         glBindVertexArray(vaoHandle)
         
         let vertexPositionLocation = shader.getAttributeLocation("a_position")!
         glEnableVertexAttribArray(vertexPositionLocation)
-        glVertexAttribPointer(vertexPositionLocation, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(MemoryLayout<VertexData>.stride), UnsafeRawPointer(bitPattern: 0))
-        
         let vertexColorLocation = shader.getAttributeLocation("a_color")!
         glEnableVertexAttribArray(vertexColorLocation)
-        glVertexAttribPointer(vertexColorLocation, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), GLsizei(MemoryLayout<VertexData>.stride), UnsafeRawPointer(bitPattern: 0))
+        
+        glBindBuffer(GLenum(GL_ARRAY_BUFFER), positionBufferHandle)
+        glVertexAttribPointer(vertexPositionLocation, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, UnsafeRawPointer(bitPattern: 0))
+        
+        glBindBuffer(GLenum(GL_ARRAY_BUFFER), colorBufferHandle)
+        glVertexAttribPointer(vertexColorLocation, 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 0, UnsafeRawPointer(bitPattern: 0))
+        
+        glBindVertexArray(0)
     }
     
     func draw() {
