@@ -25,13 +25,18 @@ class ViewController: UIViewController {
         context = EAGLContext(api: .openGLES3)!
         glkView.context = context
         glkView.isOpaque = true
-//        glView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         glkView.drawableMultisample = .multisample4X
         glkView.drawableColorFormat = .RGBA8888
         EAGLContext.setCurrent(self.context)
         
         objectGL = ObjectGL(glContext)
+        
+        let displayLink = CADisplayLink(target: self, selector: #selector(updateView(_:)))
+        displayLink.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+    }
     
+    @objc
+    func updateView(_ link: CADisplayLink) {
         glkView.display()
     }
 }
