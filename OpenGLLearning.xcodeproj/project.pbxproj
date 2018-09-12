@@ -20,6 +20,8 @@
 		EF5D20BE213EC20B00598E14 /* basic.frag in Resources */ = {isa = PBXBuildFile; fileRef = EF5D20BC213EC20B00598E14 /* basic.frag */; };
 		EF5D20C5213EC45700598E14 /* GLContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20C4213EC45700598E14 /* GLContext.swift */; };
 		EF5D20C7213EC45C00598E14 /* ObjectGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D20C6213EC45C00598E14 /* ObjectGL.swift */; };
+		EFFD3BBE2147E53C0040F4C4 /* basic_uniformblock_41.vert in Resources */ = {isa = PBXBuildFile; fileRef = EFFD3BBC2147E53C0040F4C4 /* basic_uniformblock_41.vert */; };
+		EFFD3BBF2147E53C0040F4C4 /* basic_uniformblock_41.frag in Resources */ = {isa = PBXBuildFile; fileRef = EFFD3BBD2147E53C0040F4C4 /* basic_uniformblock_41.frag */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		EF5D20BC213EC20B00598E14 /* basic.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.frag; sourceTree = "<group>"; };
 		EF5D20C4213EC45700598E14 /* GLContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLContext.swift; sourceTree = "<group>"; };
 		EF5D20C6213EC45C00598E14 /* ObjectGL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectGL.swift; sourceTree = "<group>"; };
+		EFFD3BBC2147E53C0040F4C4 /* basic_uniformblock_41.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic_uniformblock_41.vert; sourceTree = "<group>"; };
+		EFFD3BBD2147E53C0040F4C4 /* basic_uniformblock_41.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic_uniformblock_41.frag; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		EF5D20B6213EC1C800598E14 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				EFFD3BBD2147E53C0040F4C4 /* basic_uniformblock_41.frag */,
+				EFFD3BBC2147E53C0040F4C4 /* basic_uniformblock_41.vert */,
 				EF5D20B7213EC1CF00598E14 /* basic_uniform.frag */,
 				EF5D20B8213EC1CF00598E14 /* basic_uniform.vert */,
 				EF5D20BC213EC20B00598E14 /* basic.frag */,
@@ -171,9 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5D20AB213EC15C00598E14 /* LaunchScreen.storyboard in Resources */,
+				EFFD3BBE2147E53C0040F4C4 /* basic_uniformblock_41.vert in Resources */,
 				EF5D20BD213EC20B00598E14 /* basic.vert in Resources */,
 				EF5D20B9213EC1CF00598E14 /* basic_uniform.frag in Resources */,
 				EF5D20A8213EC15C00598E14 /* Assets.xcassets in Resources */,
+				EFFD3BBF2147E53C0040F4C4 /* basic_uniformblock_41.frag in Resources */,
 				EF5D20BA213EC1CF00598E14 /* basic_uniform.vert in Resources */,
 				EF5D20A6213EC15B00598E14 /* Main.storyboard in Resources */,
 				EF5D20BE213EC20B00598E14 /* basic.frag in Resources */,

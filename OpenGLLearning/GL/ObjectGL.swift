@@ -18,6 +18,7 @@ class ObjectGL: NSObject {
     
     struct VertexData {
         var x, y, z: GLfloat
+        var x2, y2, z2: GLfloat
         var r, g, b: GLfloat
         static let colorOffset = MemoryLayout<GLfloat>.size * 3
     }
@@ -32,13 +33,13 @@ class ObjectGL: NSObject {
     
     init(_ context: GLContext) {
         self.context = context
-        shader = context.getShader(vert: "basic_uniform.vert", frag: "basic_uniform.frag")!
+        shader = context.getShader(vert: "basic_uniformblock_41.vert", frag: "basic_uniformblock_41.frag")!
 
         super.init()
         
         let positionData: [VertexData] = [
-            VertexData(x: -1.0, y: -1.0, z: 0.0, r: 1.0, g: 0.0, b: 0.0),
-            VertexData(x: 1.0, y: -1.0, z: 0.0, r: 0.0, g: 1.0, b: 0.0),
+            VertexData(x: -0.5, y: -0.5, z: 0.0, x2: 1.0, y2: 0.0, z2: 0.0, ),
+            VertexData(x: 0.5, y: -0.5, z: 0.0, r: 0.0, g: 1.0, b: 0.0),
             VertexData(x: 0.0, y: 0.0, z: 0.0, r: 0.0, g: 0.0, b: 1.0)
         ]
         
